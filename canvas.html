@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Project Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Dyeezy's Library</h1>
+
+  <p>Please enter and submit book information into the following forms in order to add a new book to the library collection:</p>
+
+  <div>
+    <form>
+      <label for="title">
+        Title:
+        <input type="text" id="title" class="forms">
+      </label>
+
+      <label for="author"> Author:
+        <input type="text" id="author" class="forms">
+      </label>
+
+      <label for="pages"> Total Number of Pages:
+        <input type="number" min="0" oninput="this.value = 
+ !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" id="pages" class="forms">
+      </label>
+
+      <form id="readStatus">
+        <label for="read" class="label"> Read Status:
+          <input type="radio" id="yes" value="Yes" class="radio" name="readStatus">Yes</input>
+          <input type="radio" id="no" value="No" class="radio" name="readStatus">No</input>
+          <input type="radio" id="n/a" value="N/A" class="radio" name="readStatus" checked>N/A</input>
+        </label>
+      </form>
+
+      <div>
+        <button type="submit" id="submit" class="forms">Submit</button>
+        <button type="button" id="displayLibrary" class="forms">Click to Display Library Collection</button>
+    </form>
+  </div>
+
+  </div>
+  <div class="library">
+    <table id="library">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Read Status</th>
+        <th>Change Read Status</th>
+        <th>Remove From Library</th>
+      </tr>
+      <!--       <tr id"sampleBook">
+        <td>Extreme Ownership</td>
+        <td>Jocko Willink</td>
+        <td>130</td>
+        <td>Yes</td>
+        <td><button type="button" class="readStatusChange yes">Yes</button>
+          <button type="button" class="readStatusChange no">No</button>
+          <button type="button" class="readStatusChange n/a">N/A</button>
+        </td>
+        <td><button type="button" class="delete">Delete</button></td>
+      </tr> -->
+    </table>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
